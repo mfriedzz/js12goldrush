@@ -3,7 +3,7 @@ $(document).on('ready', function() {
 
   		var x = event.pageX;
   		var y = event.pageY;
-
+  		$(this).append('<p> Here we are</p>');   
   	});
 
 
