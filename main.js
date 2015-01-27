@@ -1,13 +1,27 @@
 $(document).on('ready', function() {
-  	$(".container").on('click', function(e) {
+  	$(document).on('click', function(event) {
 
   		var x = event.pageX;
   		var y = event.pageY;
   		//$(this).append('<p> Here we are</p>');   
-  		$(this).attr('id', '').addClass('pointer').css({
-  			top: x,
-  			left: y
-  		}).appendTo('.container');
+  		var marker = $("<div class='mapclass'>You are here</div>");
+
+
+  		marker.css({position: "absolute", top: y, left: x});
+
+  		$(".container").append(marker);
+
+  		$(document).on("click", ".mapclass", function() {
+  				$('.mapclass').remove();
+  				event.stopProgration();
+
+
+  		});
+
+  		// $(this).append('id', 'div').addClass('pointer').css({
+  		// 	top: x,
+  		// 	left: y
+  		// }).appendTo('.container');
   	});
 
 
