@@ -12,6 +12,15 @@
 	width: 20px;
 	color: green;
 }
+
+.noteBox {
+	visibility: hidden;
+	height: 60px;
+	width: 60px;
+}
+.noteBox:hover  {
+	visibility: visible;
+}
 /*.container {
 	width: 600px;
 	padding: 20px, 0;
